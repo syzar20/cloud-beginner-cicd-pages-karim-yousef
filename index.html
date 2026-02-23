@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloud CI/CD Beginner Assignment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div>
+        <h1>My Cloud CI/CD Site</h1>
+        <p class="subtitle">Static website deployed automatically using GitHub Actions + GitHub Pages</p>
+      </div>
+
+      <button id="themeBtn" class="btn secondary" type="button">🌙 Dark</button>
+    </header>
+
+    <section class="card profile">
+      <div class="avatar" aria-hidden="true">KS</div>
+      <div>
+        <p class="meta"><b>Name:</b> Karim Shafiq Yousef</p>
+        <p class="meta"><b>Course:</b> Cloud Computing</p>
+        <p class="meta small" id="dateLine"></p>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>What is CI/CD?</h2>
+        <p>
+          CI/CD is a way to automate building and delivering software.<br>
+          CI (Continuous Integration) means every push triggers automatic checks.<br>
+          CD (Continuous Delivery/Deployment) means changes can be deployed automatically.<br>
+          This reduces manual work and catches mistakes early.<br>
+          It also makes updates faster and more reliable.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>My Pipeline</h2>
+        <p>
+          After I push code to the main branch, GitHub Actions runs a workflow.<br>
+          It checks that the required files exist, then uploads the website files.<br>
+          Finally, it deploys the site automatically to GitHub Pages.
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="actions">
+          <button id="btn" class="btn primary" type="button">Click me</button>
+          <button id="resetBtn" class="btn ghost" type="button">Reset</button>
+        </div>
+
+        <p class="hint">Tip: click the button multiple times to see different messages.</p>
+
+        <div class="result">
+          <p class="label">Message</p>
+          <p id="msg" class="msg">—</p>
+
+          <div class="stats">
+            <div class="stat">
+              <span class="statTitle">Clicks</span>
+              <span id="count" class="statValue">0</span>
+            </div>
+            <div class="stat">
+              <span class="statTitle">Last action</span>
+              <span id="time" class="statValue">—</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> - Cloud Beginner CI/CD Assignment</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
